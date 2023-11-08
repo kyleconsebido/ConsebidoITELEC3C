@@ -32,3 +32,5 @@ Route::middleware([
 
 // Category Routes
 Route::get('/all/category', [CategoryController::class, 'index'])->name('AllCat');
+
+Route::post('/all/category/new', 'App\Http\Controllers\CategoryController@create');

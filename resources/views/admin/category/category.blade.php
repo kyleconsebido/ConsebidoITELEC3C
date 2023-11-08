@@ -39,11 +39,13 @@
                     </table>
                 </div>
                 <div class="col-md-4">
-                    <form>
+                    <form action="{{ url('all/category/new') }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label for="category_name">Category Name</label>
                             <input type="text" class="form-control" id="category_name" aria-describedby="emailHelp"
-                                placeholder="Category Name">
+                                name="category_name" placeholder="Category Name">
+                            <input type="hidden" name="user_id" value="1" />
                         </div>
                         <button type="submit" class="btn btn-success">Submit</button>
                     </form>
