@@ -17,7 +17,7 @@
                             <tr>
                                 <th scope="col">Id</th>
                                 <th scope="col">Category name</th>
-                                <th scope="col">User Id</th>
+                                <th scope="col">User name</th>
                                 <th scope="col">Created At</th>
                                 <th scope="col">Actions</th>
                             </tr>
@@ -27,7 +27,7 @@
                                 <tr>
                                     <td>{{ $category->id }}</td>
                                     <td>{{ $category->category_name }}</td>
-                                    <td>{{ $category->user_id }}</td>
+                                    <td>{{ $category->user->name }}</td>
                                     <td>{{ $category->created_at->diffForHumans() }}</td>
                                     <td>
                                         <a class="btn btn-primary"
