@@ -40,7 +40,7 @@
                             <label for="category_name">Category Name</label>
                             <input type="text" class="form-control" id="category_name" aria-describedby="emailHelp"
                                 name="category_name" placeholder="Category Name">
-                            <input type="hidden" name="user_id" value="1" />
+                            <input type="hidden" name="user_id" value={{ Auth::user()->id }} />
                         </div>
                         <button type="submit" class="btn btn-success">Submit</button>
                     </form>
