@@ -10,11 +10,6 @@
             {{-- <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <x-welcome />
             </div> --}}
-
-            @php
-                $i = 1;
-            @endphp
-
             <div class="row">
                 <div class="col-md-8">
                     <table class="table">
@@ -29,7 +24,7 @@
                         <tbody>
                             @foreach ($categories as $category)
                                 <tr>
-                                    <td>@php $i++ @endphp</td>
+                                    <td>{{ $category->id }}</td>
                                     <td>{{ $category->category_name }}</td>
                                     <td>{{ $category->user_id }}</td>
                                     <td>{{ $category->created_at }}</td>
