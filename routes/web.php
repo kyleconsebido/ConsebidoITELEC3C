@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -33,4 +34,7 @@ Route::middleware([
 // Category Routes
 Route::get('/all/category', [CategoryController::class, 'index'])->name('AllCat');
 
-Route::post('/all/category/new', 'App\Http\Controllers\CategoryController@create');
+Route::post('/category/add', [CategoryController::class, 'Create'])->name('category.add');
+Route::get('/category/edit/{id}', [CategoryController::class, 'Edit'])->name('category.edit');
+Route::post('/category/update/{id}', [CategoryController::class, 'Update'])->name('category.update');
+Route::post('/category/delete/{id}', [CategoryController::class, 'Delete'])->name('category.delete');
